@@ -32,7 +32,7 @@ export interface IExpectedFailure {
  * @param options additional options for the lint rule
  * @returns {LintResult} the result of linting
  */
-function lint(ruleName: string, source: string | ts.SourceFile, options: any): tslint.LintResult {
+export function lint(ruleName: string, source: string | ts.SourceFile, options: any): tslint.LintResult {
   let configuration = {
     extends: [],
     rules: new Map<string, Partial<tslint.IOptions>>(),
